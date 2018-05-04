@@ -65,5 +65,19 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
-};
 
+public:
+
+	/// it's My Variables Dynamic Material
+	/*UPROPERTY()
+	UMaterialInstanceDynamic* DynMaterial;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Material")
+	UMaterialInterface* MaterialToEdit;
+
+	UPROPERTY(EditAnywhere, Category = "Mesh")
+	FLinearColor NewColor;
+
+	virtual void OnConstruction(const FTransform& Transform) override;*/
+
+};

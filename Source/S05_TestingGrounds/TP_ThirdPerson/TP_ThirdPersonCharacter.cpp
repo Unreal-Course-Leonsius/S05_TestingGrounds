@@ -128,3 +128,13 @@ void ATP_ThirdPersonCharacter::MoveRight(float Value)
 		AddMovementInput(Direction, Value);
 	}
 }
+
+
+/// ============== My Code =======================
+
+/*void ATP_ThirdPersonCharacter::OnConstruction(const FTransform& Transform)
+{
+	DynMaterial = UMaterialInstanceDynamic::Create(MaterialToEdit, this);
+	GetMesh()->SetMaterial(0, DynMaterial);
+	DynMaterial->SetVectorParameterValue("BodyColor", NewColor);
+}*/
