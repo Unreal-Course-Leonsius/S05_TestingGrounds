@@ -23,6 +23,7 @@ EBTNodeResult::Type UChooseNextWaypoint_C::ExecuteTask(UBehaviorTreeComponent & 
 	auto Blackboardkey = OwnerComp.GetBlackboardComponent();
 	auto Index = Blackboardkey->GetValueAsInt(IndexKey.SelectedKeyName);  // we can made = GetValueAsInt("IndexKey"); = like this
 	Blackboardkey->SetValueAsObject(WayPointkey.SelectedKeyName, PatrolPoints[Index]);
+	//UE_LOG(LogTemp, Warning, TEXT("1_Index = %i"), Index);
 
 	// Cycle Index
 	auto Length = PatrolPoints.Num();
@@ -30,7 +31,10 @@ EBTNodeResult::Type UChooseNextWaypoint_C::ExecuteTask(UBehaviorTreeComponent & 
 	Index%=Length;
 	Blackboardkey->SetValueAsInt(IndexKey.SelectedKeyName, Index);
 
-	//UE_LOG(LogTemp, Warning, TEXT("AI Controller Name: %s"), *AiController->GetName());
-	//UE_LOG(LogTemp, Warning, TEXT("Index %i"), Index);
+	//UE_LOG(LogTemp, Warning, TEXT("2_Index = %i"), Index);
+	//UE_LOG(LogTemp, Warning, TEXT("================================"));
+	Blackboardkey->SetValueAsObject(RotateNextWayPoint.SelectedKeyName, PatrolPoints[Index]);
+
+	
 	return EBTNodeResult::Succeeded;
 }

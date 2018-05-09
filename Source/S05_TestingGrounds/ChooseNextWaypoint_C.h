@@ -25,4 +25,8 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	struct FBlackboardKeySelector WayPointkey;
 	
+	/// It was created for RotatePawn to Next Waypoint, but Rotate face to BB Entry node is not work ?????
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector RotateNextWayPoint;
+
 };
